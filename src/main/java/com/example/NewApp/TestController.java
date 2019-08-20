@@ -8,12 +8,21 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("users")
+@RequestMapping("/")
 public class TestController{
 
+	@RequestMapping("/")
+	@GetMapping
+	public String helloWorld(){
+		return "<h1>Hello Users!! Page is currently being build. other route '/users'</h1>";
+	}
+
+	@RequestMapping("/users")
 	@GetMapping
 	public String getUser(){
-		return "get user was called";
+		return "<h1>Get user is called</h1>";
 	}
 }
+
+
 
