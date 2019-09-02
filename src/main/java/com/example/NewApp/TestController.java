@@ -26,6 +26,12 @@ public class TestController{
 		return "<h1>Get user is called</h1>";
 	}
 
+	//GET route to return class structure
+	@RequestMapping("/apiusers")
+	public Object apiUsers(){
+		return "{userName : xyz , userPassword:xyz}";
+	}
+
 	//GET route
 	@RequestMapping("/addusers")
 	public String getData(@RequestParam(value = "userName", defaultValue="Anupal", required=false) String userName,
